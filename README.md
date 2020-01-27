@@ -1,2 +1,3 @@
-# VIP_lidar_spr2020
-This is a repository for VIP data analytics team for Spring of 2020
+# VIP LiDAR Data Analytics team
+This repo contains the work done over the Fall 2019 semester. See each folder for it's corresponding data.
+
