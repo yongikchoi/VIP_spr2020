@@ -7,10 +7,10 @@ def round_half_up(n, decimals=0):
 
 
 if __name__ == "__main__":
-    f = open("E:/School/VIP/Data/LiDAR_Data/original/CSV/V_20180816_I285_EB_run1(0)_2nd_leg.csv", "r")
+    f = open("/Volumes/NVME_USB/School/VIP/Data/2017/LiDAR/CSV/V_20170920_I285_CW(0).csv", "r")
     f.readline()
 
-    newf = open("E:/School/VIP/Data/LiDAR_Data/output/UTMpython.txt","w")
+    newf = open("/Volumes/NVME_USB/School/VIP/Data/2017/LiDAR/XYZ/V_20170920_I285_CW(0).txt","w")
     newf.write("ID Easting Northing Altitude Retro Angle Distance UTC Long Lat\n");
 
     for line in f:
