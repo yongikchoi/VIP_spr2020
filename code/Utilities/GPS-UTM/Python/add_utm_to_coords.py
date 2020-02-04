@@ -7,11 +7,11 @@ def round_half_up(n, decimals=0):
 
 
 if __name__ == "__main__":
-    f = open("/Volumes/T7 Touch/School/VIP/Data/2015/2015_coords.csv", "r")
+    f = open("/Volumes/T7 Touch/School/VIP/Data/2018/2018_coords.csv", "r")
     f.readline()
 
-    newf = open("/Volumes/T7 Touch/School/VIP/Data/2015/2015_coords_2.csv","w")
-    newf.write("pic_id,x,y,z,long,lat\n");
+    newf = open("/Volumes/T7 Touch/School/VIP/Data/2018/2018_coords_2.csv","w")
+    newf.write("pic_id,easting,northing,altitude,long,lat\n");
 
     for line in f:
         lineData = line.split(",")
@@ -20,7 +20,7 @@ if __name__ == "__main__":
         delimiter = ","
 
         # For saving as a txt file
-        # Write ID
+        # Write pic_id
         newf.write(lineData[0])
         newf.write(delimiter)
 
@@ -30,25 +30,8 @@ if __name__ == "__main__":
         # Write Northing
         newf.write(str(round_half_up(conversion[1], 3)))
         newf.write(delimiter)
-
         # Write Altitude
         newf.write(str(round_half_up(float(lineData[3]), 3)))
-        newf.write(delimiter)
-
-        # Write Retro
-        newf.write(lineData[6])
-        newf.write(delimiter)
-
-        # Write Angle
-        newf.write(lineData[4])
-        newf.write(delimiter)
-
-        # Write Distance
-        newf.write(lineData[5])
-        newf.write(delimiter)
-
-        # Write UTC
-        newf.write(lineData[7].strip())
         newf.write(delimiter)
 
         # Write Long
