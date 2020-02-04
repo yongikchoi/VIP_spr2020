@@ -11,7 +11,7 @@ if __name__ == "__main__":
     f.readline()
 
     newf = open("/Volumes/T7 Touch/School/VIP/Data/2015/2015_coords_2.csv","w")
-    newf.write("pic_id,x,y,z,long,lat\n");
+    newf.write("ID Easting Northing Altitude Retro Angle Distance UTC Long Lat\n")
 
     for line in f:
         lineData = line.split(",")
