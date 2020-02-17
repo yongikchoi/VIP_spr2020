@@ -7,17 +7,19 @@ def round_half_up(n, decimals=0):
 
 
 if __name__ == "__main__":
-    f = open("/Volumes/T7 Touch/School/VIP/Data/2015/2015_coords.csv", "r")
+    # Put CSV path and file name here
+    f = open("/Volumes/T7 Touch/School/VIP/Data/2018/LiDAR/CSV/V_20180816_I285_EB_run1(0).csv", "r")
     f.readline()
 
-    newf = open("/Volumes/T7 Touch/School/VIP/Data/2015/2015_coords_2.csv","w")
+    # Put output file path and name here
+    newf = open("/Volumes/T7 Touch/School/VIP/Data/2018/LiDAR/CSV/V_20180816_I285_EB_run1(0).txt","w")
     newf.write("ID Easting Northing Altitude Retro Angle Distance UTC Long Lat\n")
 
     for line in f:
         lineData = line.split(",")
         conversion = (UTM.from_latlon(float(lineData[2]), float(lineData[1])))
         # Conversion's x and y coordinates are float values
-        delimiter = ","
+        delimiter = " "
 
         # For saving as a txt file
         # Write ID

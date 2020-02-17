@@ -3,10 +3,10 @@ import csv
 
 if __name__ == '__main__':
 
-    csv_file = open('UTMNew.csv', 'r')
+    csv_file = open('/Volumes/T7 Touch/School/VIP/Data/2018/LiDAR/CSV/V_20180816_I285_EB_run1(0).csv', 'r')
     reader = csv.reader(csv_file)
 
-    txt_file = open('output_2.txt', 'w')
+    txt_file = open('/Volumes/T7 Touch/School/VIP/Data/2018/LiDAR/CSV/V_20180816_I285_EB_run1(0).txt', 'w')
 
     row_num = 0
     for row in reader:
